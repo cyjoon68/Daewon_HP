@@ -1,0 +1,153 @@
+.pharmacy_item {
+    display: block;
+
+    .top_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    .btm_item {
+        display: block;
+
+        p[data-slot="text_medium"] {
+
+            &:first-child {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+}
+
+.active_like {
+
+    p,
+    svg {
+        color: red !important;
+    }
+}
+
+.pharmacy_info {
+    display: block;
+    padding-top: 20px;
+
+    .pharmacy_header {
+        p[data-slot="text_medium"] {
+            text-wrap: pretty;
+        }
+
+        .top_item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+
+            .top_text_box {
+                display: block;
+
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .btm_item {
+            display: block;
+        }
+    }
+
+
+    .pharmacy_content {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        &>div {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            &>span {
+                display: flex;
+
+                & p[data-slot="text_medium"] {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .pharmacy_date {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+.pharmacy_rank_container {
+    display: block;
+    margin-top: 20px;
+    padding-bottom: 30px;
+
+    h1[data-slot="text_xlarge"] {
+        margin-bottom: 10px;
+    }
+
+    .pharmacy_rank_List {
+        display: block;
+
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.pharmacy_info_modal {
+    display: block;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    div[data-slot="container"] {
+        padding: 10px;
+        padding-bottom: 20px;
+
+    }
+
+    .modal_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .modal_body {
+        display: block;
+
+        .star_item {
+            display: flex;
+
+            div[data-slot="star"] {
+                margin-right: 5px;
+            }
+        }
+
+        & > * {
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
